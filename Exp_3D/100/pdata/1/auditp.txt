@@ -1,0 +1,28 @@
+##TITLE= Audit trail, TopSpin 4.0.6
+##JCAMPDX= 5.01
+##ORIGIN= Bruker BioSpin GmbH
+##OWNER= rschurko
+$$ /opt/topspin4.0.6/data/altenhof/nmr/Xyla_Isox_Mix_Feb3_2021/100/pdata/1/auditp.txt
+##AUDIT TRAIL=  $$ (NUMBER, WHEN, WHO, WHERE, PROCESS, VERSION, WHAT)
+(   1,<2021-02-05 03:00:41.749 +0000>,<root>,<BladeEpu>,<go4>,<TopSpin 4.0.6>,
+      <created by zg on 'Avance NEO 600wb1' (600wb1) by user 'rschurko'
+       started at 2021-02-03 19:20:39.000 +0000, POWCHK enabled, PULCHK disabled,
+       completed at 2021-02-05 03:00:41.748 +0000
+       configuration hash MD5:
+       7F 7E 37 1F 02 44 10 53 B9 CC C8 7F F4 5B D9 E3
+       double data hash MD5: 31700 * 32
+       15 56 42 D3 C9 3B 94 C9 0B 4D 29 D8 A6 D4 96 32>)
+$$ /opt/topspin4.0.6/data/altenhof/nmr/Xyla_Isox_Mix_Feb3_2021/100/audita.txt
+(   2,<2021-02-04 22:00:26.012 -0500>,<rschurko>,<600wb1.magnet.fsu.edu>,<sertoint>,<TopSpin 4.0.6>,
+      <sertoint
+       data hash MD5: 31700 * 32
+       18 4A 23 3B BE D9 7C 6C 69 4F DE 8D 35 1E CE 2B>)
+(   3,<2021-02-04 22:06:21.541 -0500>,<rschurko>,<600wb1.magnet.fsu.edu>,<proc2d>,<TopSpin 4.0.6>,
+      <Start of raw data processing
+       xf2 F2: SI = 128K FT_mod = 6 PKNL = 1 PH_mod = 2 F1: SI = 32
+       data hash MD5: 128K * 32
+       11 48 EA 0D 25 2F 02 72 E9 AB E6 EA C8 2B 18 4F>)
+##END=
+
+$$ hash MD5
+$$ 91 9A 54 F2 54 4D 45 CD FE F9 18 94 E8 44 64 DD

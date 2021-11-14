@@ -1,0 +1,17 @@
+
+dum = sp(:,1);
+
+[ph0, ph1] = autophase(dum,5,0);
+
+%out = phi_v3(dum,1.691153084199696e+02,1.855038497755193e+04,-2.098997995991984e+03,-31);
+
+out = phi_v3(dum,1.69e+02,1.855e+04,-2.1e+03,-31);
+
+plot(real(out))
+hold on
+plot(abs(dum))
+hold on
+plot(abs(out) - real(out) + 1e7);
+hold off
+%xlim([250 750])
+%ylim([0 8*1e7])

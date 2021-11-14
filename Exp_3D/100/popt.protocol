@@ -1,0 +1,238 @@
+
+Report of AU program poptau
+# Start time: 2021-02-03 12:55:32.462 -0500
+
+Number of experiments: 10
+total experiment time will be:  1 min 20 sec
+
+F1P=8507.266ppm F2P=-8501.729ppm
+PH_mode=2  FT_mod=6
+
+
+PROCNO=999
+
+Linear optimization of SPW 2 in 10 steps, as Step: Group 1
+starting at 10.000000000  endval= 100.000000000
+OPTIMUM= POSMAX
+VARMOD= LIN
+
+poptaustop was executed for SPW 2, step 8
+
+Report of AU program poptau
+# Start time: 2021-02-03 12:57:43.469 -0500
+
+Number of experiments: 10
+total experiment time will be:  1 min 20 sec
+
+F1P=8507.266ppm F2P=-8501.729ppm
+PH_mode=2  FT_mod=6
+
+
+PROCNO=998
+
+Linear optimization of SPW 1 in 10 steps, as Step: Group 1
+starting at 10.000000000  endval= 100.000000000
+OPTIMUM= POSMAX
+VARMOD= LIN
+
+poptaustop was executed for SPW 1, step 4
+
+Report of AU program poptau
+# Start time: 2021-02-03 12:58:37.869 -0500
+
+Number of experiments: 9
+total experiment time will be:  1 min 12 sec
+
+F1P=8507.266ppm F2P=-8501.729ppm
+PH_mode=2  FT_mod=6
+
+
+PROCNO=997
+
+Linear optimization of SPW 1 in 9 steps, as Step: Group 1
+starting at 2.000000000   endval= 18.000000000 
+OPTIMUM= POSMAX
+VARMOD= LIN
+
+poptaustop was executed for SPW 1, step 9
+
+Report of AU program poptau
+# Start time: 2021-02-03 13:00:31.693 -0500
+
+Number of experiments: 9
+total experiment time will be:  1 min 12 sec
+
+F1P=8507.266ppm F2P=-8501.729ppm
+PH_mode=2  FT_mod=6
+
+
+PROCNO=996
+
+Linear optimization of SPW 2 in 9 steps, as Step: Group 1
+starting at 2.000000000   endval= 18.000000000 
+OPTIMUM= POSMAX
+VARMOD= LIN
+
+poptaustop was executed for SPW 2, step 7
+
+Report of AU program poptau
+# Start time: 2021-02-03 13:21:56.127 -0500
+
+Number of experiments: 10
+total experiment time will be:  5 min  0 sec
+
+F1P=4255.017ppm F2P=-4249.480ppm
+PH_mode=2  FT_mod=6
+
+
+PROCNO=999
+
+Linear optimization of SPW 2 in 10 steps, as Step: Group 1
+starting at 10.000000000  endval= 100.000000000
+OPTIMUM= POSMAX
+VARMOD= LIN
+
+poptaustop was executed for SPW 2, step 4
+
+Report of AU program poptau
+# Start time: 2021-02-03 13:23:30.759 -0500
+
+Number of experiments: 10
+total experiment time will be:  5 min  0 sec
+
+F1P=4255.017ppm F2P=-4249.480ppm
+PH_mode=2  FT_mod=6
+
+
+PROCNO=998
+
+Linear optimization of SPW 2 in 10 steps, as Step: Group 1
+starting at 10.000000000  endval= 100.000000000
+OPTIMUM= POSMAX
+VARMOD= LIN
+
+poptaustop was executed for SPW 2, step 8
+
+Report of AU program poptau
+# Start time: 2021-02-03 13:31:01.440 -0500
+
+Number of experiments: 5
+total experiment time will be:  6 min 40 sec
+
+F1P=4255.017ppm F2P=-4249.480ppm
+PH_mode=2  FT_mod=6
+
+
+PROCNO=999
+
+Linear optimization of D 1 in 5 steps, as Step: Group 1
+starting at 10.000000000  endval= 2.000000000  
+OPTIMUM= POSMAX
+VARMOD= LIN
+
+poptaustop was executed for D 1, step 2
+
+Report of AU program poptau
+# Start time: 2021-02-03 13:32:54.527 -0500
+
+Number of experiments: 5
+total experiment time will be:  5 min  0 sec
+
+F1P=4255.017ppm F2P=-4249.480ppm
+PH_mode=2  FT_mod=6
+
+
+PROCNO=998
+
+Linear optimization of D 1 in 5 steps, as Step: Group 1
+starting at 10.000000000  endval= 2.000000000  
+OPTIMUM= POSMAX
+VARMOD= LIN
+
+Experiment        D 1         Maximum point   Minimum point       Integral
+     1      10.000000000000       414172631           18572      13512906.627380
+     2       8.000000000000       417682231           42666      13592996.625259
+     3       6.000000000000       411405343           44877      13437813.141922
+     4       4.000000000000       413801159           71358      13561790.323380
+     5       2.000000000000       395955046           89855      13548137.037399
+poptau for D 1 finished.
+POSMAX at experiment 2:  D 1 = 8.000000  
+
+
+Report of AU program poptau
+# Start time: 2021-02-03 13:36:41.592 -0500
+
+Number of experiments: 8
+total experiment time will be:  6 min 24 sec
+
+F1P=4255.017ppm F2P=-4249.480ppm
+PH_mode=2  FT_mod=6
+
+
+PROCNO=997
+
+Linear optimization of D 1 in 8 steps, as Step: Group 1
+starting at 4.000000000   endval= 0.500000000  
+OPTIMUM= POSMAX
+VARMOD= LIN
+
+Experiment        D 1         Maximum point   Minimum point       Integral
+     1       4.000000000000       410244949           61162      13612497.834396
+     2       3.500000000000       423325763           28359      13476841.607544
+     3       3.000000000000       406188835           63202      13647920.380035
+     4       2.500000000000       407711499           78957      13530657.074570
+     5       2.000000000000       412633326           56446      13608596.777939
+     6       1.500000000000       418557204          100159      13629939.297150
+     7       1.000000000000       437842478           57247      13681190.411728
+     8       0.500000000000       431391721           44136      13624777.212982
+poptau for D 1 finished.
+POSMAX at experiment 7:  D 1 = 1.000000  
+
+
+Report of AU program poptau
+# Start time: 2021-02-03 13:40:11.168 -0500
+
+Number of experiments: 12
+total experiment time will be:  1 min 36 sec
+
+F1P=4255.017ppm F2P=-4249.480ppm
+PH_mode=2  FT_mod=6
+
+
+PROCNO=996
+
+Linear optimization of SPW 1 in 12 steps, as Step: Group 1
+starting at 2.000000000   endval= 24.000000000 
+OPTIMUM= POSMAX
+VARMOD= LIN
+
+poptaustop was executed for SPW 1, step 12
+
+Report of AU program poptau
+# Start time: 2021-02-03 13:54:19.162 -0500
+
+Number of experiments: 7
+total experiment time will be: 42 sec
+
+F1P=4255.017ppm F2P=-4249.480ppm
+PH_mode=2  FT_mod=6
+
+
+PROCNO=999
+
+Linear optimization of D 1 in 7 steps, as Step: Group 1
+starting at 7.000000000   endval= 1.000000000  
+OPTIMUM= POSMAX
+VARMOD= LIN
+
+Experiment        D 1         Maximum point   Minimum point       Integral
+     1       7.000000000000       374265993           23246       5844220.152557
+     2       6.000000000000       374844439           13791       5810536.531586
+     3       5.000000000000       375278833            6997       5915673.461044
+     4       4.000000000000       367459825           29373       5863527.092667
+     5       3.000000000000       367682082           18446       5863911.550903
+     6       2.000000000000       360496259           12989       5849722.218719
+     7       1.000000000000       315311911           13969       5770521.520660
+poptau for D 1 finished.
+POSMAX at experiment 3:  D 1 = 5.000000  
+

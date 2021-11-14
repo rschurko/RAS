@@ -1,0 +1,27 @@
+
+Report of AU program poptau
+# Start time: 2021-02-03 13:32:55.680 -0500
+
+Number of experiments: 5
+total experiment time will be:  5 min  0 sec
+
+F1P=4255.017ppm F2P=-4249.480ppm
+PH_mode=2  FT_mod=6
+
+
+PROCNO=998
+
+Linear optimization of D 1 in 5 steps, as Step: Group 1
+starting at 10.000000000  endval= 2.000000000  
+OPTIMUM= POSMAX
+VARMOD= LIN
+
+Experiment        D 1         Maximum point   Minimum point       Integral
+     1      10.000000000000       414172631           18572      13512906.627380
+     2       8.000000000000       417682231           42666      13592996.625259
+     3       6.000000000000       411405343           44877      13437813.141922
+     4       4.000000000000       413801159           71358      13561790.323380
+     5       2.000000000000       395955046           89855      13548137.037399
+poptau for D 1 finished.
+POSMAX at experiment 2:  D 1 = 8.000000  
+
