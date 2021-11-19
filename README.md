@@ -25,8 +25,8 @@ A.R. Altenhof, M.J. Jaroszewicz, L. Frydman, and R.W. Schurko. 3D Relaxation-Ass
 https://doi.org/###
 
 ## Creators
-Michael Jaroszewicz
-Adam Altenhof
+- Michael Jaroszewicz
+- Adam Altenhof
 
 ## Contact
 Please contact rschurko@fsu.edu with any quesitons, feedback, or suggestions.
