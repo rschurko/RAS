@@ -10,7 +10,8 @@ a = 50;  %1st spectrum start index
 b = 480;  %Separatino index
 c = 950;  %2nd spectrum end index
 
-%%Plotting
+%%Plotting Spectra
+figure(2)
 specA = sum(RAS.spec(a:b,:),1);% + sum(RAS.spec(end,:),1);
 specB = sum(RAS.spec(b:c,:),1);
 

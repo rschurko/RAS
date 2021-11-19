@@ -9,6 +9,7 @@ sys.tau = logspace(log10(0.001),log10(3), 32)'; %Measured IR delays (VDList)
 Tx = 0;
 freq = linspace(-250+Tx,250+Tx,512);
 
+%%Plotting Spectra
 %Can use contour(RAS.spec) or mesh(RAS.spec) to find indices to separate:
 a = 5;
 b = 530;
@@ -17,6 +18,7 @@ c = 900;
 specA = sum(RAS.spec(a:b,:),1);
 specB = sum(RAS.spec(b:c,:),1) ;
 
+figure(2)
 subplot(1,2,1)
 plot(freq,(specA))
 %xlim([-40 30])
