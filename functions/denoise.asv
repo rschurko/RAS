@@ -3,9 +3,8 @@ function [Z,s] = denoise(X,n)
 %Input is mxn matrix, with m spectral points and n relaxation points
 %n is the number of principal components to retain after denoising
 
-%Returns Z denoised matrix and s singular values vector
-
-%Removed dependence on Machine Leearning Toolbox for PCA
+%Returns Z denoised matrix
+%Returns s singular values
 %[V, U] = pca(X,'Algorithm','svd');   %U will be nechoes x nechoes -> V is PC coeff, U is PC
 
 [~,b] = size(X);
@@ -17,7 +16,6 @@ end
 B = s*V';
 U = U(:,1:n);
 B = B(1:n,:);
-Z=U*B;
-s=diag(s);
+Z=U1*B;
 end
 

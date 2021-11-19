@@ -20,7 +20,7 @@ kernel.UpperLimit=10;      %Upper limit of R2 fit                         INPUT
 relax.T2A = 5; %Simulated T2A in ms
 relax.T2B = 30; %Simulated T2B in ms
 
-kernel.e = 0;    %denoising - specify # of singular values to keep - 0 for no denoising
+kernel.e = 3;    %denoising - specify # of singular values to keep - 0 for no denoising
 sys.noise = noise;  %Simulated noise
 
 kernel.alpha=alpha;%0.0; %l2 std(real(sys.Spec(1:50,1)));          %Regularization parameter.                     INPUT                    

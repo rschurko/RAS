@@ -2,7 +2,7 @@
 %%Open the R2_RAS function to adjust noise and rates
 clear;
 load('35Cl_SIMPSON_complex.mat')
-noise = 0.001; %amount of noise (b/t 0 and 1)
+noise = 0.01; %amount of noise (b/t 0 and 1)
 [RAS, kernel, relax, sys]=Sim_TSVD_R2_RAS_v4(sys,noise,0.01,0) ;
 
 %%Select relaxation indices; use mesh(RAS.spec) to find
