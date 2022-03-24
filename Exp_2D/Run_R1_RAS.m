@@ -3,6 +3,7 @@ load('deR1.mat')
 sys.Spec = despecR1; %Pre-processed denoised IR data
 
 sys.tau = logspace(log10(0.001),log10(3), 32)'; %Measured IR delays (VDList)
+% sys.tau = 0; %%VDlist read syntax
 
 [RAS, kernel, relax, sys] = TSVD_R1_RAS_v4(sys,0.01,0); %Run R1 RAS
 

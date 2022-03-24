@@ -5,7 +5,7 @@
 % ARA + MJJ 2021
 clear;
 load('3Ddespec.mat') %Load pre-processed 3D spectral data (freq x T1 x T2)
-spec = real(despec(198:300,:,:)); %Truncate baseline frequency data 
+spec = real(despec(198:300,:,:)); %Truncate baseline frequency data
 spec = spec /  max(spec, [], 'All');
 [a b c] = size(spec);
 load('t2Cl.mat');  %load vector of T2 echo times
@@ -15,7 +15,7 @@ Tx = 0; %Transmitter in kHz (can adjust later)
 t1 = logspace(log10(0.001),log10(3), 32); %Adjust tau vector (VDlist)
 
 alpha = 0; %l2 norm ( = 0.0001 in paper)
-lambda = 0; %l1 norm ( = 5 in paper. Long run time!)
+lambda = 10; %l1 norm ( = 5 in paper. Long run time!)
 
 % Generate Seperable Relaxation Kernels
 MinRateR1 = 0.5;               % 1/s
@@ -111,8 +111,7 @@ Compressed.KernelR2_Truncated = Compressed.S_R2_Truncated*transpose(Compressed.V
 Kernel = kron(Compressed.KernelR2_Truncated,Compressed.KernelR1_Truncated);
 
 kernel_L1 = get_l(NumRatesR1*NumRatesR2,2);                  
-kernel_L2 = get_l(NumRatesR1*NumRatesR2,2);
-Kernel_MxyL =[Kernel;alpha*kernel_L1;alpha*kernel_L2];   % Tikhonov regularization with L=2nd discrete deriv. op.
+Kernel_MxyL =[Kernel;alpha*kernel_L1]; % Tikhonov regularization with L=2nd discrete deriv. op.
 
 if lambda == 0
     parfor i=1:a
@@ -121,7 +120,7 @@ if lambda == 0
 
     % Compressed Data Stacking 
     DataRawStacked = reshape(DataRaw_Truncated,[size(DataRaw_Truncated,2)*size(DataRaw_Truncated,1),1]);
-    DataRawConc = [ DataRawStacked; zeros(size(kernel_L1,1),1); zeros(size(kernel_L1,1),1)];
+    DataRawConc = [ DataRawStacked; zeros(size(kernel_L1,1),1)];
     %Perform NNLS Fitting of Stacked Data
     %RatesDistribution = lsqnonneg(Kernel,DataRawStacked);
     RatesDistribution = lsqnonneg(Kernel_MxyL,DataRawConc);
@@ -138,7 +137,7 @@ else
 
     % Compressed Data Stacking 
     DataRawStacked = reshape(DataRaw_Truncated,[size(DataRaw_Truncated,2)*size(DataRaw_Truncated,1),1]);
-    DataRawConc = [ DataRawStacked; zeros(size(kernel_L1,1),1); zeros(size(kernel_L1,1),1)];
+    DataRawConc = [ DataRawStacked; zeros(size(kernel_L1,1),1)];
     %Perform NNLS Fitting of Stacked Data
     %RatesDistribution = lsqnonneg(Kernel,DataRawStacked);
     %RatesDistribution = lsqnonneg(Kernel_MxyL,DataRawConc);

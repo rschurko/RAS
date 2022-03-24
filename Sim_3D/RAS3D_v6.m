@@ -1,6 +1,6 @@
-% R1/R2 Correlation Map - Version 5: 
+% R1/R2 Correlation Map - Version 6:
 % 3D Simulated RAS Processing w/ TSVD + EN  + denoising
-% ARA 2020
+% ARA+MJJ 2022
 clear;
 load('35Cl_SIMPSON_complex.mat')
 % Generate Relaxation Data
@@ -19,13 +19,13 @@ Data_t1B = 1-2*exp(-t1.*R1B);         % T1 Recovery
 Data_t2A = exp(-t2.*R2A);    % T2 Decay
 Data_t2B = exp(-t2.*R2B);    % T2 Decay
 
-alpha = 0.0; %0.015;
+alpha = 0.01; %0.015;
 lambda = 0.0; %0.6;
-Noise = 0.0;  %0.014
-e = 0;      %denoising; operates w/ t2 dimension
+Noise = 0.01;  %0.014
+e = 3;      %denoising; number of singular values to retain
 f = 2; %1 or 2 for denoise dimension
 
-%See adjustable kernel params at line 90
+%%%See adjustable kernel params at line 86
 
 % Generate Spectral Data
 SiteA = sys.A(137:321); %truncate baseline
@@ -126,8 +126,7 @@ Compressed.KernelR2_Truncated = Compressed.S_R2_Truncated*transpose(Compressed.V
 Kernel = kron(Compressed.KernelR2_Truncated,Compressed.KernelR1_Truncated);
 
 kernel_L1 = get_l(NumRatesR1*NumRatesR2,2);                  
-kernel_L2 = get_l(NumRatesR1*NumRatesR2,2);
-Kernel_MxyL =[Kernel;alpha*kernel_L1;alpha*kernel_L2];   % Tikhonov regularization with L=2nd discrete deriv. op.
+Kernel_MxyL =[Kernel;alpha*kernel_L1]; % Tikhonov regularization with L=2nd discrete deriv. op.
 
 if lambda == 0
     parfor i=1:numel(SiteA)
@@ -136,7 +135,7 @@ if lambda == 0
 
     % Compressed Data Stacking 
     DataRawStacked = reshape(DataRaw_Truncated,[size(DataRaw_Truncated,2)*size(DataRaw_Truncated,1),1]);
-    DataRawConc = [ DataRawStacked; zeros(size(kernel_L1,1),1); zeros(size(kernel_L1,1),1)];
+    DataRawConc = [ DataRawStacked; zeros(size(kernel_L1,1),1)];
     %Perform NNLS Fitting of Stacked Data
     %RatesDistribution = lsqnonneg(Kernel,DataRawStacked);
     RatesDistribution = lsqnonneg(Kernel_MxyL,DataRawConc);
@@ -152,7 +151,7 @@ else
 
     % Compressed Data Stacking 
     DataRawStacked = reshape(DataRaw_Truncated,[size(DataRaw_Truncated,2)*size(DataRaw_Truncated,1),1]);
-    DataRawConc = [ DataRawStacked; zeros(size(kernel_L1,1),1); zeros(size(kernel_L1,1),1)];
+    DataRawConc = [ DataRawStacked; zeros(size(kernel_L1,1),1)];
     %Perform NNLS Fitting of Stacked Data
     %RatesDistribution = lsqnonneg(Kernel,DataRawStacked);
     %RatesDistribution = lsqnonneg(Kernel_MxyL,DataRawConc);
