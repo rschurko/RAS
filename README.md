@@ -31,8 +31,10 @@ https://doi.org/###
 ## Contact
 Please contact rschurko@fsu.edu with any quesitons, feedback, or suggestions.
 
-## License
+## Support
+This software was supported (in part) by the National Science Foundation Chemical Measurement and Imaging Program, with partial co-funding from the Solid State and Materials Chemistry Program (NSF-2003854).
 
+## License
 MIT
 
 [//]: # ()
