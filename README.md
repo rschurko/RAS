@@ -20,9 +20,7 @@ Relaxation assisted seperation (RAS) is a method for analyzing and resolving NMR
 
 ## Citing
 If you use RAS please cite the following:
-TBD
-A.R. Altenhof, M.J. Jaroszewicz, L. Frydman, and R.W. Schurko. 3D Relaxation-Assisted NMR: Achieving site-specific resolution in ultra-wideline NMR patterns. 
-https://doi.org/###
+A.R. Altenhof, M.J. Jaroszewicz, L. Frydman, and R.W. Schurko. 3D Relaxation-Assisted Separation of Wideline Solid-State NMR Patterns for Achieving Site Resolution. PhysChemChemPhys. https://doi.org/10.1039/D2CP00910B
 
 ## Creators
 - Michael Jaroszewicz
